@@ -7,4 +7,4 @@ There are 4 different stages of the falling that loop.
 
 Outer Space --> Blue Skys --> Earth (underground) --> Earth Core (Lava) --> loop back
 
-When the user scrolls down the page, The "Fall Guy" has a falling animation. Whe they scroll up, he has a floating animation. When there is no scroll, the Fall Guy has a floating animation (re:floats - Still unsure about this, might have an auto scroll going)
+When the user scrolls down the page, The "Fall Guy" has a falling animation. When they scroll up, he has a floating animation. When there is no scroll, the Fall Guy has a floating animation (re:floats - Still unsure about this, might have an auto scroll going)
