@@ -1,7 +1,36 @@
-<!DOCTYPE html> 
-<html>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
 <head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>Fall Guy</title>
+<script type="text/javascript">
+$('.bg').scroll(function() {
+    var x = $(this).scrollTop();
+    $(this).css('background-position', '10% ' + parseInt(-x / 10) + 'px');
+});
+</script>
+<style>
+html, body{
+    height:100%;
+    min-height:100%;
+	width:100%;
+    margin:0;
+    padding:0;
+}
+.bg{
+    width:100%;
+    height:100%;
+    background: #fff url(bg.jpg) no-repeat fixed 0 0;
+    overflow:auto;
+}
+
+</style>
+
 </head>
+
 <body>
+<div class="bg">
+   <span>Fall Guy</span>
+</div>
 </body>
 </html>
