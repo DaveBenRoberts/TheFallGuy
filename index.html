@@ -20,17 +20,19 @@ html, body{
     overflow:auto;
     background-attachment: fixed;
 }
+#bg-image{
+    height:9000px;
+    width:100%;
+}
 
 </style>
 </head>
 
 <body>
-<div class="bg" data-stellar-background-ratio="0.5">
-   <span>Fall Guy</span>
-</div>
+
 
 <div class="universe" id ="universe-a">
-	<img id="bg-image" src="bg.jpg" height="100%"/>
+	<img id="bg-image" src="bg.jpg"/>
 </div>
 
  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
@@ -49,15 +51,15 @@ $(document).ready(function(){
         scrollBy(0,50);
         //alert(scrolled +' and '+$("#bg-image").height());
         if(scrolled >= $("#bg-image").height()){
-            //alert("End");
+            //alert("End: "+ scrolled);
             //clearInterval(interval);
             scrolled = 0;
             if(universeType){
-                 img += '<div class="universe" id=universe-b><img id="bg-image" src="bg.jpg" height="100%"/></div>';
+                 img += '<div class="universe" id=universe-b><img id="bg-image" src="bg.jpg"/></div>';
                  universeType = !universeType;
                  prevImg = '#universe-a';
             }else{
-                  img += '<div class="universe" id=universe-a><img id="bg-image" src="bg.jpg" height="100%"/></div>';
+                  img += '<div class="universe" id=universe-a><img id="bg-image" src="bg.jpg"/></div>';
                 universeType = !universeType;
                 prevImg = '#universe-b';
 
