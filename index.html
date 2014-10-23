@@ -65,7 +65,9 @@ $(document).ready(function(){
            
             $("body").append(img);
             img = '';
-            //$(prevImg).remove();
+            $(prevImg).remove();
+            //alert();
+            $(window).scrollTop(0);
         }
     },100)
 
