@@ -18,24 +18,34 @@ html, body{
     height:100%;
     background: #fff url(bg.jpg) no-repeat fixed 0 0;
     overflow:auto;
+    background-attachment: fixed;
 }
 
 </style>
 </head>
 
 <body>
-<div class="bg">
+<div class="bg" data-stellar-background-ratio="0.5">
    <span>Fall Guy</span>
 </div>
 
 <div class="universe">
-	
+	<img src="bg.jpg"/>
 
 </div>
 
  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+ <script type="text/javascript" src="js/stellar.js"></script>
 
 <script type="text/javascript">
+$(document).ready(function(){
+    $('.bg').stellar();
+    setInterval(function(){
+        //alert();
+        scrollBy(0,50);
+    },100)
+
+});
 
 $('.bg').scroll(function() {
     var x = $(this).scrollTop();
