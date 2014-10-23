@@ -42,8 +42,7 @@ z-index:1;
 margin-top:20%;
 }
 .theguy img{
-
-width:280px;
+    width:280px;
 }
 
 </style>
@@ -51,7 +50,7 @@ width:280px;
 
 <body>
 
-<div class="theguy"><center><img src="http://clt-envirolaw.com/wp-content/uploads/2012/08/guy.png"/></center></div>
+<div class="theguy"><img src="http://clt-envirolaw.com/wp-content/uploads/2012/08/guy.png" class="guyImg"/></div>
 <div class="universe" id ="universe-a">
 	<img id="bg-image" src="bg.jpg"/>
 </div>
@@ -61,6 +60,11 @@ width:280px;
 
 <script type="text/javascript">
 $(document).ready(function(){
+    var guyHeight = $(".guyImg").height()/2;
+    var guyWidth = $(".guyImg").width()/2;
+
+    $(".theguy").css({'bottom':$(window).height()/2 - guyHeight, 'left':$(window).width()/2 - guyWidth});
+
     $('.bg').stellar();
     var scrolled = 0;
     var universeType = true;
@@ -68,8 +72,8 @@ $(document).ready(function(){
     var prevImg;
     var interval = setInterval(function(){
         //alert();
-        scrolled += 50;
-        scrollBy(0,50);
+        scrolled += 100;
+        scrollBy(0,100);
         //alert(scrolled +' and '+$("#bg-image").height());
         if(scrolled >= $("#bg-image").height()){
             //alert("End: "+ scrolled);
