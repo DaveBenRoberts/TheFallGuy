@@ -63,6 +63,8 @@ $(document).ready(function(){
     var guyHeight = $(".guyImg").height()/2;
     var guyWidth = $(".guyImg").width()/2;
 
+    var universeHeight = $("#bg-image").height()/2;
+
     $(".theguy").css({'bottom':$(window).height()/2 - guyHeight, 'left':$(window).width()/2 - guyWidth});
 
     $('.bg').stellar();
@@ -70,12 +72,13 @@ $(document).ready(function(){
     var universeType = true;
     var img = '';
     var prevImg;
+
     var interval = setInterval(function(){
         //alert();
         scrolled += 110;
-        scrollBy(0,100);
+        scrollBy(0,110);
         //alert(scrolled +' and '+$("#bg-image").height());
-        if(scrolled >= $("#bg-image").height()){
+        if(scrolled > $("#bg-image").height() - universeHeight/4){
             //alert("End: "+ scrolled);
             //clearInterval(interval);
             scrolled = 0;
